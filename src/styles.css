@@ -1,0 +1,158 @@
+.App {
+  display: block;
+  width: 80%;
+  margin: 2% 10%;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  color: #30a535;
+  padding: 0.5rem;
+  border-bottom: solid 1px;
+}
+
+.heading {
+  background-color: #64d66a;
+  padding: 0.51rem 2rem;
+  border-radius: 1rem;
+  color: #ffffff;
+  margin: 1rem 0;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #f9f9f9;
+  padding: 1rem 0;
+  border-radius: 5px;
+  border: 1px solid #90ef95;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  cursor: pointer;
+}
+
+/* restaurant form css */
+.restaurant-form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #90ef95;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  cursor: pointer;
+  background: #f0f0f0;
+}
+
+.restaurant-form input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.restaurant-form button {
+  padding: 10px;
+  border: none;
+  background-color: #30a535;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 10px;
+}
+
+.error {
+  font-size: 12px;
+  margin: -0.5rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.required {
+  color: red;
+  margin-right: 5px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+/* restaurant Card css */
+
+.restaurant-card button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  width: 5rem;
+}
+
+.restaurant-card span {
+  width: 90%;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.restaurant-card .buttons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin-top: 10px;
+}
+.restaurant-card .buttons {
+  opacity: 0.8;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}
+
+.edit-button {
+  background-color: #30a535;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #16701b;
+}
+
+.name {
+  font-size: 1.5rem !important;
+  color: #30a535;
+  font-weight: bold;
+}
+.card-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 1.5rem;
+  height: 1.5rem;
+  white-space: nowrap;
+}
+
+.watermark {
+  text-align: center;
+  color: gray;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+@media (min-width: 1150px) {
+  .restaurant-form {
+    margin: 20px 25%;
+  }
+}

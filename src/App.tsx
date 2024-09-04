@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import RestaurantList from '../src/component/RestaurantList'
+import RestaurantForm from '../src/component/RestaurantForm'
+import { Restaurant } from './types'
+import './styles.css'
 
-function App() {
+const App: React.FC = () => {
+  const [editingRestaurant, setEditingRestaurant] = useState<Restaurant | null>(
+    null
+  )
+
+  const handleFormSubmit = () => {
+    setEditingRestaurant(null) // Clear the editing state after form submission
+  }
+
+  const handleEdit = (restaurant: Restaurant) => {
+    setEditingRestaurant(restaurant)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="title">Foodie Delight</div>
+      <RestaurantForm
+        restaurantToEdit={editingRestaurant}
+        onFormSubmit={handleFormSubmit}
+      />
+      <RestaurantList onEdit={handleEdit} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
